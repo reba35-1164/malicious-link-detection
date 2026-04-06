@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malicious Link Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <h1 class="title">Malicious Link Blocker</h1>
+        <p id="statusText" class="status-pill">Enabled</p>
+      </header>
+
+      <section class="stats" aria-label="Protection stats">
+        <div class="stats-header">
+          <h2 class="section-title">Stats</h2>
+          <button id="refreshFeedBtn" class="refresh-btn" type="button">Refresh feed</button>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="stat-label">Redirects detected</p>
+            <p id="redirectCountText" class="stat-value">0</p>
+          </article>
+          <article class="stat-card stat-card-alert">
+            <p class="stat-label">Redirects blocked</p>
+            <p id="blockedRedirectCountText" class="stat-value">0</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Blocklist domains</p>
+            <p id="listCountText" class="stat-value">0</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Whitelist domains</p>
+            <p id="allowListCountText" class="stat-value">0</p>
+          </article>
+        </div>
+        <p id="remoteUpdatedText" class="updated">Last threat feed refresh: never</p>
+      </section>
+
+      <label class="switch" for="enabledToggle">
+        <input id="enabledToggle" type="checkbox" />
+        <span class="slider" aria-hidden="true"></span>
+        <span class="label-text">Enable real-time protection</span>
+      </label>
+
+      <button id="manageListsBtn" class="manage-btn" type="button">Manage Block/Whitelist</button>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

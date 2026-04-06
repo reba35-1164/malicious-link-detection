@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Management</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <h1>Malicious Link Blocker Lists</h1>
+        <p>
+          The primary malicious domain feed is downloaded automatically every week.
+          Add one host pattern per line below for extra custom blocking. Wildcards are supported, e.g.
+          <strong>*.example.com</strong> or <strong>*-ads.*</strong>.
+        </p>
+        <p id="remoteInfo" class="remote-info">Threat feed entries: --</p>
+      </header>
+
+      <section class="panel">
+        <h2>Custom Block List</h2>
+        <textarea id="blockListInput" rows="10" placeholder="bad-site.com&#10;*.tracking.example"></textarea>
+      </section>
+
+      <section class="panel">
+        <h2>Whitelist</h2>
+        <textarea id="allowListInput" rows="10" placeholder="trusted.com&#10;*.partner.net"></textarea>
+      </section>
+
+      <div class="actions">
+        <button id="saveBtn" type="button">Save Lists</button>
+        <span id="saveStatus" class="status" aria-live="polite"></span>
+      </div>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>

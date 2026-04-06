@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danger Warning</title>
+    <link rel="stylesheet" href="warning.css" />
+  </head>
+  <body>
+    <main class="warning-card">
+      <p class="tag">Danger Warning</p>
+      <h1>Potentially unsafe redirect blocked</h1>
+      <p class="description">A redirect attempted to send you to a blocked destination.</p>
+
+      <div class="meta">
+        <p><strong>From:</strong> <span id="sourceUrl">Unknown</span></p>
+        <p><strong>To:</strong> <span id="targetUrl">Unknown</span></p>
+      </div>
+
+      <div class="actions">
+        <button id="backBtn" type="button" class="secondary">Go Back</button>
+        <button id="proceedBtn" type="button" class="danger">Proceed to site</button>
+      </div>
+    </main>
+
+    <script src="warning.js"></script>
+  </body>
+</html>
